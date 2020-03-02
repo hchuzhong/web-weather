@@ -1,0 +1,33 @@
+.main{
+	text-align: center;
+}
+
+.input{
+	width: 300px;
+	height: 25px;
+	border: 1px solid #2395ca;
+}
+
+.btn{
+	width: 60px;
+	height: 28px;
+	background-color: #2395ca;
+	color: white;
+	border: 0;
+}
+
+.screen{
+	display: flex;
+	flex-direction: row;
+}
+
+.info_type{
+	font-size: 25px;
+	color: #eec16d;
+}
+
+.info_temp{
+	color: #eec16d;
+	margin: 15px;
+	font-size: 14px;
+}

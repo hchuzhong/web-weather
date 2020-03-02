@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WEATHER</title>
+	<link rel="stylesheet" href="weather.css">
+	
+</head>
+<body>
+	<div id="app" class="main">
+		<!--标题-->
+		<h2>天气预报</h2>
+		<!--搜索框-->
+		<section>
+			<input type="text" class="input" v-model="city" placeholder="请输入城市" @keyup.enter="enter">
+			<button class="btn" class="button" @click="search">搜 索</button>
+		</section>
+		<!--显示框-->
+		<ul class="screen">
+			<li v-for="item in weatherList" style="list-style-type:none;">
+				<div class="info_type">
+					<span>{{item.type}}</span>
+				</div>
+				<div class="info_temp">
+					<b>{{item.low}}</b>
+					~
+					<b>{{item.high}}</b>
+				</div>
+				<div class="info_date">
+					<span>{{item.date}}</span>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<script src="../vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="weather.js"></script>
+</body>
+</html>
